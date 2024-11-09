@@ -14,18 +14,18 @@ build-backend = "poetry.core.masonry.api"
 python = ">=3.10, <3.12"
 
 # carrot optional dependencies
-bandit = {version = ">=1.7.4, <1.8"}
 black = {version = ">=24.4.2"}
-flake8 = {version = ">=4.0.1, <7.0"}
+isort = {version = ">=5.12.0, <5.13"}
 Flask = {version = "^3.0.0"}
 Flask-SQLAlchemy = {version = "^3.0.0"}
 SQLAlchemy = {version = "^2.0.30"}
-isort = {version = ">=5.12.0, <5.13"}
+scrapy = "^2.11.0"
+requests = {version = "2.31.0"}
 pytest = {version = "^8.3.0"}
 pytest-cov = {version = ">=4.1.0"}
-requests = {version = "2.31.0"}
 psycopg2 = {version = "^2.9"}
 tox = {version = ">=4.5.0, <4.6.0"}
+pre-commit = ">=3.7.0"
 
 [tool.black]
 line-length = 120
@@ -39,19 +39,3 @@ include_trailing_comma = true
 force_grid_wrap = 0
 line_length = 120
 known_first_party = ["carrot", "tests"]
-
-[tool.flake8]
-max-line-length = 120
-count = true
-exclude = [
-    ".git",
-    ".pre-commit-config.yaml",
-    "poetry.lock",
-    "pyproject.toml",
-    "tests/"
-]
-ignore = "E501"
-
-[tool.bandit]
-exclude_dirs = ["tests"]
-skips = ["B404", "B602", "B603", "B607", "B105"]

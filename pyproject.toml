@@ -19,6 +19,7 @@ black = {version = ">=24.4.2"}
 flake8 = {version = ">=4.0.1, <7.0"}
 Flask = {version = "^3.0.0"}
 Flask-SQLAlchemy = {version = "^3.0.0"}
+SQLAlchemy = {version = "^2.0.30"}
 isort = {version = ">=5.12.0, <5.13"}
 pytest = {version = "^8.3.0"}
 pytest-cov = {version = ">=4.1.0"}
